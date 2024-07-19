@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Value Index Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Value Index Calculator</h1>
+        <p class="author">Created by Vince Nguyen</p>
+        <p class="description">This tool helps you determine whether a food item is worth buying based on its nutritional value and cost.</p>
+        <div class="input-container">
+            <label for="servings">Number of Servings</label>
+            <input type="number" id="servings" placeholder="Enter number of servings">
+
+            <label for="calories">Calories per Serving</label>
+            <input type="number" id="calories" placeholder="Enter calories per serving">
+
+            <label for="protein">Protein per Serving (g)</label>
+            <input type="number" id="protein" placeholder="Enter protein per serving">
+
+            <label for="price">Price ($)</label>
+            <input type="number" id="price" placeholder="Enter price">
+            
+            <button onclick="calculateValueIndex()">Calculate</button>
+        </div>
+        <div class="result" id="result"></div>
+        <div class="recommendation" id="recommendation"></div>
+        <div class="value-ranges">
+            <p><strong>Value Index Ranges:</strong></p>
+            <p style="color: green;">> 1.5: This item is worth buying.</p>
+            <p style="color: orange;">0.5 - 1.5: This item requires consideration.</p>
+            <p style="color: darkred;">< 0.5: This item is not worth buying.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
